@@ -1,6 +1,9 @@
 ﻿namespace CustomerApi.Domain
 {
-    public class CustomerRepository
+    interface  CustomerRepository
     {
+        Task<List<Customer>> GetCustomersAsync();
+
+        Task AddCostomer(Customer customer);
     }
 }
